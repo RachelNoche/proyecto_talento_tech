@@ -1,0 +1,51 @@
+html {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+body{
+    background-color:lavenderblush ;
+ }
+
+.name_page{
+    color: pink;
+    text-align: center;
+}
+
+.discount_background{
+    background-color: pink;
+}
+
+.discount{
+    text-align: center;
+    padding: 10px;
+}
+
+.container{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos salten a la siguiente línea si no caben en la fila */
+    gap: 20px; /* Espacio entre los elementos */
+    justify-content: center; /* Distribuye los productos uniformemente */
+}
+
+.product{
+    flex: 1 1 250px; /* Cada producto ocupa mínimo 250px, y se encoge o crece según el espacio disponible */
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    max-width: 300px; 
+    padding: 15px;
+    border: 1px solid whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px pink;
+}
+
+.product img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
