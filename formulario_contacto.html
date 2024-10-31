@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icono (1).ico">
     <title>Formulario de Contacto</title>
     <style>
         body {
@@ -25,7 +26,7 @@
         }
         input, textarea {
             width: 100%;
-            padding: 10px;
+            padding: 5px;
             margin: 10px 0;
             border: 1px solid whitesmoke;
             border-radius: 5px;
@@ -38,10 +39,22 @@
             border-radius: 5px;
             border-color: pink;
         }
+        .map_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .map {
+            width: 100%;
+            max-width: 600px; 
+            height: 450px;
+            border: 0;
+            border-radius: 10px; 
+        }
     </style>
 </head>
 <body>
-
 <div class="form_container">
     <h2>Contacto</h2>
     <form action="https://formspree.io/f/manynbyj" method="POST">
@@ -57,6 +70,7 @@
         <button type="submit">Enviar</button>
     </form>
 </div>
-
-</body>
+<div class="map_container">
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.2431721220589!2d-58.424129464520036!3d-34.579557611884155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb59b4bba4733%3A0x837a430834217dfe!2sAv.%20Sta.%20Fe%204464%2C%20C1425%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1730216640845!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 </html>
