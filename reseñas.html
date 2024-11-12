@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icono (1).ico">
+    <title>Reseñas</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: whitesmoke;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: grey;
+        }
+
+        .reviews_section {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 20px;
+            width: 100vw;
+            height: 100vh;
+            background-color: lightpink;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .reviews_section h2 {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .reviews_grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .review_card {
+            background-color: white;
+            color: grey;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px pink;
+            transition: transform 0.3s ease;
+        }
+
+        .review_card:hover {
+            transform: translateY(-5px);
+        }
+
+        .review_text {
+            font-size: 1em;
+            color: grey;
+            font-style: italic;
+        }
+
+        .review_author {
+            font-weight: bold;
+            color: lightpink;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .review_rating {
+            color: pink;
+            font-size: 20px;
+        }
+
+        .review_form {
+            background-color: white;
+            color: lightpink;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px pink;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .review_form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .review_form input, .review_form textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border: 1px solid whitesmoke;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .review_form button {
+            background-color: lightpink;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .review_form button:hover {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <section class="reviews_section">
+        <h2>Nuestros Clientes</h2>
+        
+        <div class="reviews_grid">
+            <div class="review_card">
+                <p class="review_text">"Excelente calidad y diseño, sin duda vuelvo a comprar."</p>
+                <div class="review_rating">★★★★★</div>
+                <p class="review_author">- Agustina Martinez</p>
+            </div>
+            <div class="review_card">
+                <p class="review_text">"Todo llego en perfecto estado. Recomendable."</p>
+                <div class="review_rating">★★★★☆</div>
+                <p class="review_author">- Sol Valentina</p>
+            </div>
+            <div class="review_card">
+                <p class="review_text">"Ropa hermosa y de calidad muy buena."</p>
+                <div class="review_rating">★★★★★</div>
+                <p class="review_author">- Carla Lopez</p>
+            </div>
+            <div class="review_card">
+                <p class="review_text">"Hermoso diseño y entrega rápida. Lo recomiendo."</p>
+                <div class="review_rating">★★★★☆</div>
+                <p class="review_author">- Luciana Agostina</p>
+            </div>
+        </div>
+
+        <form class="review_form">
+            <h3>Dejanos una reseña!</h3>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
+            
+            <label for="review">Reseña</label>
+            <textarea id="review" name="review" rows="4" placeholder="Escribe tu reseña" required></textarea>
+            
+            <label for="rating">Calificación</label>
+            <select id="rating" name="rating">
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+            </select>
+            
+            <button type="submit">Enviar Reseña</button>
+        </form>
+    </section>
+</body>
+</html>
